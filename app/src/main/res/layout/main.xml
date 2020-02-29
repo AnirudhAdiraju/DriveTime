@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainback"
+    >
+
+    <Button
+        android:id="@+id/detect"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:background="@drawable/ic_power_button"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="160dp"
+        android:onClick="toggle"
+        />
+
+    <Button
+        android:id="@+id/item2"
+        android:layout_width="300dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft = "50dp"
+        android:onClick="filereport"
+        android:background="@drawable/reportbut" />
+
+    <Button
+        android:id="@+id/item4"
+        android:layout_width="300dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft = "50dp"
+        android:onClick="database"
+        android:background="@drawable/databasebut" />
+    />
+
+</LinearLayout>
