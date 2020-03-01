@@ -20,6 +20,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
 public class Login extends AppCompatActivity {
@@ -27,13 +28,17 @@ public class Login extends AppCompatActivity {
     Button btn;
     String pass;
     String user;
+    public static String total;
+    public static String totalNight;
+    public static String totalDay;
+    public static String totalHighway;
+    public static String totalLocal;
+    public static String totalMajor;
+    public static String comments;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        if (RealMainActivity.logged){
-            Intent intent = new Intent(getApplicationContext(),RealMainActivity.class);
-            startActivity(intent);
-        }
-        else {
+
             super.onCreate(savedInstanceState);
             setContentView(R.layout.login);
             getSupportActionBar().hide();
@@ -42,7 +47,7 @@ public class Login extends AppCompatActivity {
             editName = (EditText) findViewById(R.id.username);
             editPass = (EditText) findViewById(R.id.password);
 
-        }
+
     }
 
 
@@ -60,11 +65,21 @@ public class Login extends AppCompatActivity {
 
                         loading.dismiss();
 
-                        if(response.equals("true")){
+                        if(response.split(",")[0].equals("true")){
+                            String[] x = response.split(",");
+                            total= x[1];
+                            totalDay = x[2];
+                            totalNight = x[3];
+                            totalLocal = x[4];
+                            totalMajor = x[5];
+                            totalHighway = x[6];
+                            comments = x[7];
+
                             RealMainActivity.username = user;
                             Intent intent = new Intent(getApplicationContext(),RealMainActivity.class);
                             startActivity(intent);
                             RealMainActivity.logged = true;
+
                         }
                         else{
                             Toast.makeText(Login.this,"Incorrect Username or Password",Toast.LENGTH_LONG).show();

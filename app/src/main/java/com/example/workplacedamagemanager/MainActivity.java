@@ -100,7 +100,10 @@ public class MainActivity extends AppCompatActivity {
         queue.add(stringRequest);
 
     }
-
+    public void home(View view) {
+        Intent intent1 = new Intent(this, RealMainActivity.class);
+        this.startActivity(intent1);
+    }
     public void populateListView() {
         Log.d("hi", "populateListView: Displaying data in the ListView.");
 

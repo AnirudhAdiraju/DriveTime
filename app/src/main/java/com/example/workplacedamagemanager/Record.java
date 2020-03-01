@@ -121,7 +121,7 @@ public static final int PICK_IMAGE = 1;
                         new DatePickerDialog.OnDateSetListener() {
                             @Override
                             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                                eText.setText(dayOfMonth + "/" + (monthOfYear + 1) + "/" + year);
+                                eText.setText((monthOfYear + 1) + "/" + dayOfMonth + "/" + year);
                             }
                         }, year, month, day);
                 picker.show();
@@ -137,7 +137,6 @@ public static final int PICK_IMAGE = 1;
             String item = parent.getItemAtPosition(position).toString();
 
             // Showing selected spinner item
-            Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_LONG).show();
         }
     }
     public void onNothingSelected(AdapterView<?> arg0) {

@@ -11,10 +11,19 @@
         <ListView
             android:id="@+id/listView"
             android:layout_width="@dimen/_250sdp"
-            android:layout_height="@dimen/_450sdp"
+            android:layout_height="@dimen/_310sdp"
             android:layout_marginTop="@dimen/_100sdp"
             android:layout_centerHorizontal="true"
             />
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_420sdp"
+            android:layout_centerHorizontal="true"
+            android:onClick="home"
+            android:background="@drawable/home" />
 
 
 

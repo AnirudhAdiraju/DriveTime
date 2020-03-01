@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back">
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/carzzz" />
+
+    <ImageView
+        android:layout_width="@dimen/_222sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_120sdp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/lisc" />
+    <ImageView
+        android:layout_width="@dimen/_222sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_180sdp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/thrs" />
+    <ImageView
+        android:layout_width="@dimen/_222sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_240sdp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/nhrs" />
+    <ImageView
+        android:layout_width="@dimen/_222sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_120sdp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/lisc" />
+    <ImageView
+        android:layout_width="@dimen/_222sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_300sdp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/hrsweek" />
+
+
+    <TextView
+        android:id="@+id/totalhrs"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_170sdp"
+        android:layout_marginTop="@dimen/_185sdp"
+        android:background="@null"
+        android:ems="10"
+        android:color="#000000"
+        android:gravity="center"
+        android:hint=""
+        android:inputType="textPersonName"  />
+    <TextView
+        android:id="@+id/nighthrs"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_170sdp"
+        android:layout_marginTop="@dimen/_245sdp"
+        android:background="@null"
+        android:ems="10"
+        android:color="#000000"
+        android:gravity="center"
+        android:hint=""
+        android:inputType="textPersonName"  />
+    <TextView
+        android:id="@+id/hrsperweek"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_195sdp"
+        android:layout_marginTop="@dimen/_305sdp"
+        android:background="@null"
+        android:ems="10"
+        android:gravity="center"
+        android:color="#000000"
+        android:hint=""
+        android:inputType="textPersonName"  />
+
+    <ImageView
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_360sdp"
+        android:background="@drawable/ic_comments"
+        android:ems="10"
+        android:gravity="center"
+        android:hint=""
+        android:inputType="textPersonName"
+
+
+        />
+
+
+    <TextView
+        android:id="@+id/comments"
+        android:layout_width="@dimen/_240sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/_80sdp"
+        android:layout_marginTop="@dimen/_390sdp"
+        android:gravity="center"
+        android:color="#000000"
+        android:background="@drawable/comms"
+         />
+
+
+    <EditText
+        android:id="@+id/lisc"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_170sdp"
+        android:layout_marginTop="@dimen/_125sdp"
+        android:background="@null"
+        android:ems="10"
+        android:gravity="center"
+        android:hint=""
+        android:inputType="textPersonName"  />
+
+    <Button
+        android:id="@+id/refresh"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginStart="@dimen/_245sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/refresh"
+        android:onClick="refresh" />
+
+</RelativeLayout>

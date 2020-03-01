@@ -29,6 +29,9 @@
         <activity android:name=".RealMainActivity"
             android:label="Home"
             android:parentActivityName=".Login"/>
+        <activity android:name=".Dashboard"
+            android:label="Home"
+            android:parentActivityName=".Login"/>
 
         <activity android:name=".Login">
             <intent-filter>

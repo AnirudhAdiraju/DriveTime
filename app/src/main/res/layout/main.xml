@@ -13,13 +13,13 @@
         android:adjustViewBounds="true"
         android:background="@drawable/buttons" />
     <Button
-        android:id="@+id/swatch"
-        android:layout_width="@dimen/_150sdp"
-        android:layout_height="@dimen/_125sdp"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:layout_centerHorizontal="true"
-        android:onClick="toggle"
-        android:background="@drawable/stopwatch" />
+    android:id="@+id/swatch"
+    android:layout_width="@dimen/_150sdp"
+    android:layout_height="@dimen/_125sdp"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:layout_centerHorizontal="true"
+    android:onClick="toggle"
+    android:background="@drawable/stopwatch" />
     <Chronometer
         android:id="@+id/chronometer"
         android:layout_width="@dimen/_100sdp"
@@ -55,7 +55,7 @@
         android:layout_height="@dimen/_60sdp"
         android:layout_marginTop="@dimen/_310sdp"
         android:layout_centerHorizontal="true"
-        android:onClick="database"
+        android:onClick="dashboard"
         android:background="@drawable/ic_dashboard" />
 
     />

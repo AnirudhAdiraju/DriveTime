@@ -126,6 +126,11 @@ public class RealMainActivity extends AppCompatActivity implements CompoundButto
         Intent intent1 = new Intent(this, MainActivity.class);
         this.startActivity(intent1);
     }
+
+    public void dashboard(View view) {
+        Intent intent1 = new Intent(this, Dashboard.class);
+        this.startActivity(intent1);
+    }
     public static Date parseDate(String date) {
         try {
             return new SimpleDateFormat("yyyy-MM-dd").parse(date);
@@ -157,10 +162,12 @@ public class RealMainActivity extends AppCompatActivity implements CompoundButto
         int x =Integer.parseInt(currentTime.substring(currentTime.indexOf(":")-2,currentTime.indexOf(":")-1));
         if ( x>18 || x<6)
         {
-            myDb.insertData(currentTime, "Night", Integer.toString(60*Integer.parseInt(hours.substring(0,2))+Integer.parseInt(hours.substring(3,5))), "","", username, "Local Road");
+            myDb.insertData(currentTime, "Day", Integer.toString(60*Integer.parseInt(hours.substring(0,2))+Integer.parseInt(hours.substring(3,5))), "","", username, "Local Road");
         }
         else{
-            myDb.insertData(currentTime, "Day", Integer.toString(60*Integer.parseInt(hours.substring(0,2))+Integer.parseInt(hours.substring(3,5))), "","", username, "Local Road");
+
+            myDb.insertData(currentTime, "Night", Integer.toString(60*Integer.parseInt(hours.substring(0,2))+Integer.parseInt(hours.substring(3,5))), "","", username, "Local Road");
+
 
         }
         Toast.makeText(RealMainActivity.this,"Recorded",Toast.LENGTH_LONG).show();
