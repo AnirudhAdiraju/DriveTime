@@ -84,11 +84,36 @@ public class Dashboard  extends AppCompatActivity implements AdapterView.OnItemS
                                     day = "0" + dayOfMonth;
                                 }
                                 eText.setText(month + "/" + day + "/" + year);
-                                String[] date = eText.getText().toString().split("/");
-                                LocalDate dateOfBirth = LocalDate.of(Integer.parseInt(date[2]), Integer.parseInt(date[0]), Integer.parseInt(date[1]));
-                                LocalDate currentDate = LocalDate.now();
-                                long diffInDays = Math.abs(ChronoUnit.DAYS.between(dateOfBirth, currentDate));
-                                Log.d("oof",""+diffInDays);
+                                long diffInDays = 1;
+                                try {
+                                    //Dates to compare
+                                    String CurrentDate=  eText.getText().toString();
+                                    Date c = Calendar.getInstance().getTime();
+
+                                    SimpleDateFormat df = new SimpleDateFormat("MM/dd/yyyy");
+                                    String FinalDate = df.format(c);
+
+                                    Date date1;
+                                    Date date2;
+
+                                    SimpleDateFormat dates = new SimpleDateFormat("MM/dd/yyyy");
+
+                                    //Setting dates
+                                    date1 = dates.parse(CurrentDate);
+                                    date2 = dates.parse(FinalDate);
+
+                                    //Comparing dates
+                                    long difference = Math.abs(date1.getTime() - date2.getTime());
+                                    diffInDays = difference / (24 * 60 * 60 * 1000);
+
+                                    //Convert long to String
+                                    String dayDifference = Long.toString(diffInDays);
+
+                                    Log.d("HERE","HERE: " + dayDifference);
+
+                                } catch (Exception exception) {
+                                    Log.d("DIDN'T WORK", "exception " + exception);
+                                }
                                 hrsperweek.setText(""+Math.round(100*(50.0-(Double.parseDouble(totalhrs.getText().toString())))/(diffInDays/7.0))/100.0);
 
                             }
@@ -132,11 +157,36 @@ public class Dashboard  extends AppCompatActivity implements AdapterView.OnItemS
                         Login.totalNight = x[2];
                         Login.comments = x[6];
                         if(eText.getText().toString().length()==10) {
-                            String[] date = eText.getText().toString().split("/");
-                            LocalDate dateOfBirth = LocalDate.of(Integer.parseInt(date[2]), Integer.parseInt(date[0]), Integer.parseInt(date[1]));
-                            LocalDate currentDate = LocalDate.now();
-                            long diffInDays = Math.abs(ChronoUnit.DAYS.between(dateOfBirth, currentDate));
-                            Log.d("oof", "" + diffInDays);
+                            long diffInDays = 1;
+                            try {
+                                //Dates to compare
+                                String CurrentDate=  eText.getText().toString();
+                                Date c = Calendar.getInstance().getTime();
+
+                                SimpleDateFormat df = new SimpleDateFormat("MM/dd/yyyy");
+                                String FinalDate = df.format(c);
+
+                                Date date1;
+                                Date date2;
+
+                                SimpleDateFormat dates = new SimpleDateFormat("MM/dd/yyyy");
+
+                                //Setting dates
+                                date1 = dates.parse(CurrentDate);
+                                date2 = dates.parse(FinalDate);
+
+                                //Comparing dates
+                                long difference = Math.abs(date1.getTime() - date2.getTime());
+                                diffInDays = difference / (24 * 60 * 60 * 1000);
+
+                                //Convert long to String
+                                String dayDifference = Long.toString(diffInDays);
+
+                                Log.d("HERE","HERE: " + dayDifference);
+
+                            } catch (Exception exception) {
+                                Log.d("DIDN'T WORK", "exception " + exception);
+                            }
                             hrsperweek.setText("" + Math.round(100 * (50.0 - (Double.parseDouble(totalhrs.getText().toString()))) / (diffInDays / 7.0)) / 100.0);
                         }
                     }
